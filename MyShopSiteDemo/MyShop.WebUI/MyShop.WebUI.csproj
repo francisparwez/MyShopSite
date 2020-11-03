@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -235,6 +236,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -251,6 +256,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyShop.Core\MyShop.Core.csproj">
+      <Project>{1ff1986f-d712-4bfe-ba65-c3e24669cf19}</Project>
+      <Name>MyShop.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.DataAccess.InMemory\MyShop.DataAccess.InMemory.csproj">
+      <Project>{f3c3847f-0aa4-4573-ae15-026c9ca36778}</Project>
+      <Name>MyShop.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.DataAccess.SQL\MyShop.DataAccess.SQL.csproj">
+      <Project>{ccaaca15-e7e7-4779-9f09-4eef430db2e3}</Project>
+      <Name>MyShop.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.Services\MyShop.Services.csproj">
+      <Project>{00c03e2e-651e-4b0d-a513-20195325c41b}</Project>
+      <Name>MyShop.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
