@@ -65,18 +65,16 @@ namespace MyShop.DataAccess.InMemory
 
         public void Delete(string Id)
         {
-            Product productToBeDeleted = products.Find(prod => prod.Id == Id);
-            if (productToBeDeleted != null)
+            Product productToDelete = products.Find(prod => prod.Id == Id);
+            if (productToDelete != null)
             {
-                products.Remove(productToBeDeleted);
+                products.Remove(productToDelete);
             }
             else
             {
                 throw new Exception("Product Not Found");
             }
         }
-
-
 
     }
 }
